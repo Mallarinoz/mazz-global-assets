@@ -1,0 +1,65 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root { 
+    --gold: #d4af37; --bg: #0a0a0a; --card: #161616; --text: #ffffff;
+    --shadow-heavy: 0 20px 50px rgba(0, 0, 0, 0.8);
+    --gold-glow: 0 0 30px rgba(212, 175, 55, 0.45);
+}
+body.light-mode { 
+    --bg: #f5f5f5; --card: #ffffff; --text: #222222;
+    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --gold-glow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+body { 
+    background: var(--bg); color: var(--text); 
+    font-family: 'Poppins', sans-serif; margin: 0; 
+    transition: background 0.4s, color 0.4s; scroll-behavior: smooth; 
+}
+
+/* Header */
+header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 1.2rem 5%; border-bottom: 2px solid var(--gold); 
+    background: var(--bg); position: sticky; top: 0; z-index: 100; 
+}
+.nav-links { display: flex; align-items: center; gap: 25px; }
+.nav-item { color: var(--text); text-decoration: none; font-weight: 600; transition: 0.3s; }
+.nav-item:hover { color: var(--gold); }
+
+/* Directorio (Igual al color del footer) */
+.index-section {
+    margin: 2.5rem 5%; padding: 2.5rem; 
+    background: var(--card); border: 1px solid rgba(212, 175, 55, 0.4); 
+    border-radius: 20px; text-align: center; box-shadow: var(--shadow-heavy);
+}
+.index-link {
+    color: var(--text); text-decoration: none; font-weight: bold; 
+    transition: 0.3s; padding: 8px 15px; display: inline-block;
+}
+.index-link:hover { color: var(--gold); transform: translateY(-2px); }
+
+/* Tarjetas con Efecto Marcado */
+.grid-container { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 340px)); 
+    gap: 40px; padding: 3rem 5%; justify-content: center; 
+}
+.card { 
+    background: var(--card); border: 1px solid rgba(212, 175, 55, 0.15); 
+    padding: 2.5rem; border-radius: 25px; text-align: center; 
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: var(--shadow-heavy);
+}
+.card:hover { 
+    border-color: var(--gold); transform: translateY(-18px); 
+    box-shadow: var(--gold-glow); 
+}
+
+.gold-link-btn { 
+    display: inline-block; margin-top: 15px; color: var(--text); 
+    border: 2px solid var(--gold); padding: 8px 22px; border-radius: 8px; 
+    text-decoration: none; font-weight: 600; transition: 0.3s; 
+}
+.gold-link-btn:hover { background: var(--gold); color: #000; }
+.area-badge { background: var(--gold); color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
