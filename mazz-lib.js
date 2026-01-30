@@ -81,6 +81,3 @@ class MazzFooter extends HTMLElement {
         </footer>`;
     }
 }
-
-customElements.define('mazz-social', MazzSocial);
-customElements.define('mazz-footer', MazzFooter);
